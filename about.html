@@ -504,7 +504,6 @@
       font-size: 0.9rem;
       color: #e4f4ff;
     }
-
     aside[data-cookie-banner] {
       position: fixed;
       bottom: 16px;
@@ -519,7 +518,11 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      z-index: 20;
+      z-index: 9999;
+      pointer-events: auto;
+    }
+    aside[data-cookie-banner][hidden] {
+      display: none;
     }
 
     aside[data-cookie-banner] [data-cookie-actions] {
@@ -639,7 +642,7 @@
           <div>
             <p data-eyebrow>About suomitop24</p>
               <h1>A lounge for calm, curious play.</h1>
-              <p>suomitop24 is a social casino lounge for people who enjoy the look and rhythm of reel-based games but do not want real-money pressure. We keep the pages clear and the pacing steady so you can focus on the experience.</p>
+              <p>suomitop24 is a social casino lounge for people who enjoy the look and rhythm of reel-based games and the kasinot aesthetic but do not want real-money pressure. We keep the pages clear and the pacing steady so you can focus on the experience.</p>
               <p>We focus on clean layouts, bold color, and plain-language notes so you always know what you are getting.</p>
               <p>It started as a simple idea for a study-break page that felt polished but not intense. The goal was always to keep it easy to use, even if you only have a few minutes.</p>
               <p>If a line of text sounds confusing, we rewrite it. That is not a design choice, it is just being considerate.</p>
@@ -871,6 +874,9 @@
           const storeChoice = (value) => {
             writeCookieChoice(value);
             banner.setAttribute("hidden", "");
+            // Hide immediately in case the browser ignores the hidden attribute.
+            banner.hidden = true;
+            banner.style.display = "none";
           };
           if (accept) {
             accept.addEventListener("click", () => storeChoice("accepted"));
@@ -900,4 +906,8 @@
     </script>
 </body>
 </html>
+
+
+
+
 

@@ -469,7 +469,6 @@
       font-size: 0.9rem;
       color: #e4f4ff;
     }
-
     aside[data-cookie-banner] {
       position: fixed;
       bottom: 16px;
@@ -484,7 +483,11 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      z-index: 20;
+      z-index: 9999;
+      pointer-events: auto;
+    }
+    aside[data-cookie-banner][hidden] {
+      display: none;
     }
 
     aside[data-cookie-banner] [data-cookie-actions] {
@@ -593,6 +596,7 @@
         <div data-wrap>
           <h1>Game showcase</h1>
           <p>Our current spotlight game is Dragon Maiden, a story-forward reel with bright symbols and a steady rhythm. Entertainment only. 18+ access.</p>
+          <p>If you are drawn to kasinot-style art and mythic themes, this one hits that note without the money layer.</p>
           <p>The page is short on purpose so you do not have to scroll through a giant list to find the game. It is one choice, one click, and you are in.</p>
           <p>If you are just browsing, this is still a good place to get a feel for the art and the theme before starting a session.</p>
           <p>We keep the focus tight because a single game lets you actually learn the flow instead of hopping between tabs.</p>
@@ -740,6 +744,9 @@
           const storeChoice = (value) => {
             writeCookieChoice(value);
             banner.setAttribute("hidden", "");
+            // Hide immediately in case the browser ignores the hidden attribute.
+            banner.hidden = true;
+            banner.style.display = "none";
           };
           if (accept) {
             accept.addEventListener("click", () => storeChoice("accepted"));
@@ -769,4 +776,8 @@
     </script>
 </body>
 </html>
+
+
+
+
 
