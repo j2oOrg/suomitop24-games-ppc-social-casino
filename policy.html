@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | suomitop24</title>
+  <meta name="description" content="Review the suomitop24 Privacy Policy and learn how we handle data in the social casino lounge.">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    @font-face {
+      font-family: "Blackpast";
+      src: url("otf/blackpast-blackpast-400.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --ink: #0b1f2f;
+      --ink-soft: #3f566b;
+      --brand: #148a8f;
+      --brand-deep: #0b4f5b;
+      --accent-sun: #f6b024;
+      --accent-coral: #ff6f6f;
+      --accent-lime: #9be15d;
+      --accent-sky: #4cc9f0;
+      --accent-berry: #ff8ccf;
+      --surface: #ffffff;
+      --surface-soft: #f6f9fc;
+      --shadow: 0 24px 50px rgba(11, 31, 47, 0.16);
+      --shadow-soft: 0 14px 30px rgba(11, 31, 47, 0.12);
+      --focus: #ff9f1c;
+      --radius: 24px;
+      --font-body: "Blackpast", "Trebuchet MS", "Verdana", "Tahoma", sans-serif;
+      --font-display: "Blackpast", "Trebuchet MS", "Verdana", "Tahoma", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(246, 176, 36, 0.35), transparent 45%),
+        radial-gradient(circle at 85% 20%, rgba(76, 201, 240, 0.32), transparent 40%),
+        radial-gradient(circle at 78% 85%, rgba(255, 111, 111, 0.28), transparent 45%),
+        linear-gradient(120deg, #fef7e6, #eef7ff 55%, #fff0f6);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 12vh auto auto -8vw;
+      width: 30vw;
+      height: 30vw;
+      background: radial-gradient(circle, rgba(155, 225, 93, 0.2), transparent 65%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto -10vw -10vh auto;
+      width: 34vw;
+      height: 34vw;
+      background: radial-gradient(circle, rgba(255, 140, 207, 0.18), transparent 65%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    h1,
+    h2 {
+      font-family: var(--font-display);
+      letter-spacing: 0.4px;
+      margin: 0 0 12px;
+    }
+
+    h3 {
+      font-family: var(--font-display);
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    main {
+      padding: 72px 24px 110px;
+    }
+
+    section {
+      margin-top: 84px;
+      position: relative;
+    }
+
+    [data-wrap] {
+      width: min(1240px, 90vw);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(90deg, #fff5df 0%, #e9fbff 52%, #fff0f6 100%);
+      border-bottom: 1px solid #e4ecf1;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    header [data-wrap] {
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      padding: 24px 0;
+    }
+
+    header [data-brand] {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header [data-brand] svg {
+      width: 42px;
+      height: 42px;
+    }
+
+    header [data-brand] strong {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    header [data-brand] span {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(11, 31, 47, 0.06);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover {
+      background: linear-gradient(120deg, rgba(76, 201, 240, 0.8), rgba(20, 138, 143, 0.8));
+      color: #fff;
+    }
+
+    nav a[aria-current="page"] {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    a[data-cta] {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: none;
+      border-radius: 999px;
+      padding: 12px 22px;
+      background: linear-gradient(120deg, var(--brand), var(--accent-sky));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: var(--shadow-soft);
+    }
+
+    a:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 159, 28, 0.35);
+    }
+
+    section[data-section="legal"] {
+      background: #fff;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #e2eef3;
+      position: relative;
+      overflow: hidden;
+    }
+
+    section[data-section="legal"] [data-wrap] {
+      width: min(960px, 90vw);
+    }
+
+    section[data-section="legal"]::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 6px;
+      background: linear-gradient(120deg, var(--accent-sky), var(--accent-coral));
+    }
+
+    section[data-section="legal"] h1 {
+      font-size: clamp(2.4rem, 3.4vw, 3.2rem);
+      margin: 0 0 12px;
+    }
+
+    section[data-section="legal"] ol {
+      padding-left: 22px;
+      display: grid;
+      gap: 16px;
+      margin: 24px 0 0;
+    }
+
+    section[data-section="legal"] li {
+      padding-left: 6px;
+    }
+
+    section[data-section="legal"] h2 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: linear-gradient(120deg, #0b1f2f, #103b41 45%, #0b1f2f);
+      color: #f8fbff;
+      margin-top: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -100px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(76, 201, 240, 0.35), transparent 60%);
+      opacity: 0.8;
+    }
+
+    footer [data-wrap] {
+      padding: 56px 0 40px;
+      display: grid;
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer [data-footer-grid] {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1.3fr 1fr 1fr;
+    }
+
+    footer [data-footer-grid] > div {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    footer ul {
+      list-style: none;
+      margin: 12px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    footer a {
+      color: #f8fbff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    [data-disclaimer] {
+      font-size: 0.9rem;
+      color: #e4f4ff;
+    }
+
+    aside[data-cookie-banner] {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(720px, 92vw);
+      background: linear-gradient(120deg, #ffffff, #f5fbff);
+      border: 1px solid #dbe7ef;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 20;
+    }
+
+    aside[data-cookie-banner] [data-cookie-actions] {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    aside[data-cookie-banner] button {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-weight: 700;
+      border: 2px solid var(--brand);
+      background: #fff;
+      cursor: pointer;
+    }
+
+    aside[data-cookie-banner] button[data-cookie-accept] {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    @media (max-width: 1100px) {
+      header [data-wrap] {
+        grid-template-columns: 1fr;
+        justify-items: start;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+
+      footer [data-footer-grid] {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding: 48px 16px 80px;
+      }
+
+      section {
+        margin-top: 56px;
+      }
+
+      footer [data-footer-grid] {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div data-wrap>
+      <div data-brand>
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" fill="#f6b024" />
+          <path d="M24 10l4.5 9.2 10.1 1.5-7.3 7.2 1.7 10.1L24 33.5 15 38l1.7-10.1-7.3-7.2 10.1-1.5L24 10z" fill="#148a8f" />
+        </svg>
+        <div>
+          <strong>suomitop24</strong>
+          <span>Social casino, play-for-fun.</span>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="play.html">Play</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a data-cta href="play.html">Start playing</a>
+    </div>
+  </header>
+
+  <main>
+    <section data-section="legal">
+      <div data-wrap>
+          <h1>Privacy Policy</h1>
+          <p>Effective date: 2026-01-15</p>
+          <p>This policy explains how suomitop24 handles information on this social casino entertainment site.</p>
+          <p>We keep data collection light and try to be clear about what we do and do not store.</p>
+          <ol>
+            <li>
+              <h2>Data we collect</h2>
+              <p>We collect the information you submit in our forms, such as your name and email for newsletter signups or contact requests.</p>
+              <p>We do not collect payment data because there are no payments on this site.</p>
+            </li>
+            <li>
+              <h2>Cookies and local storage</h2>
+              <p>We use cookies or local storage to remember your consent choice and basic preferences. We do not use tracking cookies for advertising.</p>
+              <p>The consent choice stores only your selection, not your browsing history.</p>
+            </li>
+            <li>
+              <h2>How we use data</h2>
+              <p>We use your information to respond to messages, deliver updates you request, and improve the experience.</p>
+              <p>We do not use your data for targeted advertising or sell it to third parties.</p>
+            </li>
+            <li>
+              <h2>Sharing and disclosure</h2>
+              <p>We do not sell your data. We share information only when required by law or to protect the site and its users.</p>
+              <p>If we must share data for legal reasons, we limit it to what is required.</p>
+            </li>
+            <li>
+              <h2>Retention</h2>
+              <p>We keep contact and newsletter data only as long as needed to fulfill requests or maintain subscriptions.</p>
+              <p>If you ask us to delete your information, we will do so within a reasonable time.</p>
+            </li>
+            <li>
+              <h2>Security</h2>
+              <p>We use reasonable safeguards to protect stored information, but no system is completely secure.</p>
+              <p>Please avoid sending sensitive personal data through the contact form.</p>
+            </li>
+            <li>
+              <h2>User rights</h2>
+              <p>You can request access, correction, or deletion of your information by contacting us.</p>
+              <p>We may ask for basic verification before making changes to protect your data.</p>
+            </li>
+            <li>
+              <h2>Changes to this policy</h2>
+              <p>We may update this policy occasionally. Continued use of the site means you accept the updated version.</p>
+              <p>The effective date at the top shows the latest revision.</p>
+            </li>
+            <li>
+              <h2>Contact information</h2>
+              <p>For privacy questions, email hello@suomitop24.games.</p>
+              <p>You can also reach us through the contact form and mention "Privacy."</p>
+            </li>
+          </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div data-wrap>
+      <div data-footer-grid>
+        <div>
+          <h2>Get lounge updates</h2>
+          <p>A short monthly note with lounge updates and staff picks.</p>
+          <form data-newsletter-form>
+            <div data-newsletter-fields>
+              <div>
+                <label for="newsletter-name">Name</label>
+                <input id="newsletter-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div>
+                <label for="newsletter-email">Email</label>
+                <input id="newsletter-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <button data-cta type="submit">Subscribe</button>
+            </div>
+          </form>
+          <p data-newsletter-success hidden role="status">You're on the list. We'll send the next update soon.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="games.html">Game gallery</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="policy.html" aria-current="page">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <p data-disclaimer>18+ only. Entertainment only. No real money, no prizes, no cash value, and no purchases required. Please play responsibly.</p>
+    </div>
+  </footer>
+
+  <aside data-cookie-banner hidden role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div>
+      <strong>Cookie settings</strong>
+      <p>We use a small cookie to remember your choice and basic preferences.</p>
+    </div>
+    <div data-cookie-actions>
+      <button data-cookie-accept type="button">Accept</button>
+      <button data-cookie-decline type="button">Decline</button>
+    </div>
+  </aside>
+
+    <script>
+      (() => {
+        // Front-end helpers for this page.
+        // Cookie banner: remember the choice and hide after a click.
+        const cookieKey = "suomitop24_cookie_choice";
+        const banner = document.querySelector("[data-cookie-banner]");
+        // Local storage helpers guard against privacy mode errors.
+        const readCookieChoice = () => {
+          try {
+            return localStorage.getItem(cookieKey);
+          } catch (error) {
+            return null;
+          }
+        };
+        const writeCookieChoice = (value) => {
+          try {
+            localStorage.setItem(cookieKey, value);
+          } catch (error) {
+            return;
+          }
+        };
+        if (banner) {
+          const saved = readCookieChoice();
+          if (saved) {
+            banner.setAttribute("hidden", "");
+          } else {
+            banner.removeAttribute("hidden");
+          }
+          const accept = banner.querySelector("[data-cookie-accept]");
+          const decline = banner.querySelector("[data-cookie-decline]");
+          const storeChoice = (value) => {
+            writeCookieChoice(value);
+            banner.setAttribute("hidden", "");
+          };
+          if (accept) {
+            accept.addEventListener("click", () => storeChoice("accepted"));
+          }
+          if (decline) {
+            decline.addEventListener("click", () => storeChoice("declined"));
+          }
+        }
+
+        // Newsletter form: show a success message without sending data.
+        const newsletterForm = document.querySelector("[data-newsletter-form]");
+        if (newsletterForm) {
+          const fields = newsletterForm.querySelector("[data-newsletter-fields]");
+          const success = document.querySelector("[data-newsletter-success]");
+          newsletterForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            if (fields) {
+              fields.setAttribute("hidden", "");
+            }
+            if (success) {
+              success.removeAttribute("hidden");
+            }
+            newsletterForm.reset();
+          });
+        }
+      })();
+    </script>
+</body>
+</html>

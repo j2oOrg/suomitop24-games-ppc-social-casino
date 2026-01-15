@@ -1,195 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <title>404 - Page not found</title>
-    <meta
-      name="description"
-      content="Page not found. Check the address and try again."
-    >
-    <style>
-      :root {
-        --hs-404-ink: #1f2328;
-        --hs-404-muted: #4b5563;
-        --hs-404-line: rgba(31, 35, 40, 0.14);
-        --hs-404-paper: rgba(255, 255, 255, 0.92);
-        --hs-404-warm: #f2b95f;
-        --hs-404-cool: #8bc8c4;
-        --hs-404-shadow: rgba(15, 23, 42, 0.22);
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 | suomitop24</title>
+  <meta name="description" content="Page not found on suomitop24.">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    @font-face {
+      font-family: "Blackpast";
+      src: url("otf/blackpast-blackpast-400.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --ink: #0b1f2f;
+      --ink-soft: #3f566b;
+      --brand: #148a8f;
+      --accent-sun: #f6b024;
+      --accent-coral: #ff6f6f;
+      --accent-sky: #4cc9f0;
+      --accent-berry: #ff8ccf;
+      --shadow: 0 24px 50px rgba(11, 31, 47, 0.16);
+      --focus: #ff9f1c;
+      --font-body: "Blackpast", "Trebuchet MS", "Verdana", "Tahoma", sans-serif;
+      --font-display: "Blackpast", "Trebuchet MS", "Verdana", "Tahoma", sans-serif;
+    }
 
-      * {
-        box-sizing: border-box;
-      }
+    * {
+      box-sizing: border-box;
+    }
 
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-        color: var(--hs-404-ink);
-        background:
-          radial-gradient(1100px 520px at 15% 10%, rgba(242, 185, 95, 0.35), transparent 60%),
-          radial-gradient(1000px 620px at 85% 80%, rgba(139, 200, 196, 0.35), transparent 65%),
-          linear-gradient(160deg, #f7f2e9 0%, #eef4f2 55%, #f8efe2 100%);
-        font-family: "Avenir Next", "Futura", "Gill Sans", "Trebuchet MS", sans-serif;
-      }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(246, 176, 36, 0.35), transparent 45%),
+        radial-gradient(circle at 85% 20%, rgba(76, 201, 240, 0.32), transparent 40%),
+        radial-gradient(circle at 78% 85%, rgba(255, 111, 111, 0.28), transparent 45%),
+        linear-gradient(120deg, #fef7e6, #eef7ff 55%, #fff0f6);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-      .hs-404-stage {
-        position: relative;
-        width: min(720px, 100%);
-      }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 8vh auto auto -10vw;
+      width: 34vw;
+      height: 34vw;
+      background: radial-gradient(circle, rgba(155, 225, 93, 0.2), transparent 65%);
+      pointer-events: none;
+      z-index: -1;
+    }
 
-      .hs-404-orbit {
-        position: absolute;
-        inset: -28px;
-        border-radius: 28px;
-        border: 1px dashed var(--hs-404-line);
-        transform: rotate(-2deg);
-        animation: slow-spin 26s linear infinite;
-        pointer-events: none;
-      }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto -12vw -12vh auto;
+      width: 36vw;
+      height: 36vw;
+      background: radial-gradient(circle, rgba(255, 140, 207, 0.18), transparent 65%);
+      pointer-events: none;
+      z-index: -1;
+    }
 
-      .hs-404-orbit::before,
-      .hs-404-orbit::after {
-        content: "";
-        position: absolute;
-        border-radius: 999px;
-        filter: blur(1px);
-        opacity: 0.7;
-      }
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 40px 16px;
+    }
 
-      .hs-404-orbit::before {
-        width: 140px;
-        height: 140px;
-        top: -30px;
-        left: 12%;
-        background: radial-gradient(circle, rgba(242, 185, 95, 0.45), transparent 65%);
-        animation: drift 9s ease-in-out infinite;
-      }
+    [data-wrap] {
+      width: min(720px, 92vw);
+      text-align: center;
+      background: #fff;
+      border-radius: 28px;
+      padding: 44px 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid #e2eef3;
+      position: relative;
+      overflow: hidden;
+    }
 
-      .hs-404-orbit::after {
-        width: 190px;
-        height: 190px;
-        bottom: -50px;
-        right: 8%;
-        background: radial-gradient(circle, rgba(139, 200, 196, 0.45), transparent 65%);
-        animation: drift 11s ease-in-out infinite reverse;
-      }
+    [data-wrap]::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 6px;
+      background: linear-gradient(120deg, var(--accent-sun), var(--accent-sky), var(--accent-berry));
+    }
 
-      .hs-404-card {
-        position: relative;
-        padding: 36px 38px;
-        border-radius: 22px;
-        background: var(--hs-404-paper);
-        border: 1px solid rgba(31, 35, 40, 0.08);
-        box-shadow: 0 24px 60px var(--hs-404-shadow);
-        backdrop-filter: blur(6px);
-        animation: rise-in 700ms ease-out both;
-      }
+    [data-code] {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin: 0;
+    }
 
-      .hs-404-code {
-        display: inline-block;
-        padding: 6px 14px;
-        border-radius: 999px;
-        background: rgba(31, 35, 40, 0.08);
-        font-weight: 600;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        font-size: 0.78rem;
-      }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 12px 0;
+    }
 
-      .hs-404-title {
-        margin: 18px 0 8px;
-        font-size: clamp(2.1rem, 4vw, 2.8rem);
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        letter-spacing: 0.02em;
-      }
+    p {
+      color: var(--ink-soft);
+      margin: 0 0 16px;
+    }
 
-      .hs-404-text {
-        margin: 0 0 14px;
-        line-height: 1.65;
-        color: var(--hs-404-muted);
-      }
+    [data-tip] {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 111, 111, 0.16);
+      color: #7a2c22;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
 
-      .hs-404-meta {
-        margin-top: 18px;
-        padding-top: 14px;
-        border-top: 1px solid var(--hs-404-line);
-        font-size: 0.9rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--hs-404-muted);
-      }
+    aside[data-cookie-banner] {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(720px, 92vw);
+      background: linear-gradient(120deg, #ffffff, #f5fbff);
+      border: 1px solid #dbe7ef;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 20;
+    }
 
-      @keyframes rise-in {
-        from {
-          opacity: 0;
-          transform: translateY(16px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+    aside[data-cookie-banner] [data-cookie-actions] {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-      @keyframes slow-spin {
-        from {
-          transform: rotate(-2deg);
-        }
-        to {
-          transform: rotate(358deg);
-        }
-      }
+    aside[data-cookie-banner] button {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-weight: 700;
+      border: 2px solid var(--brand);
+      background: #fff;
+      cursor: pointer;
+    }
 
-      @keyframes drift {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(10px);
-        }
-      }
+    aside[data-cookie-banner] button[data-cookie-accept] {
+      background: var(--brand);
+      color: #fff;
+    }
 
-      @media (max-width: 640px) {
-        body {
-          padding: 18px;
-        }
-
-        .hs-404-card {
-          padding: 28px 26px;
-        }
+    @media (max-width: 720px) {
+      [data-wrap] {
+        padding: 36px 20px;
       }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div data-wrap>
+        <p data-code>404</p>
+        <h1>We could not find that page</h1>
+        <p>That address does not point to a page on suomitop24.</p>
+        <div data-tip>Check the address or head back to where you were.</div>
+      </div>
+    </section>
+  </main>
 
-      @media (prefers-reduced-motion: reduce) {
-        .hs-404-orbit,
-        .hs-404-orbit::before,
-        .hs-404-orbit::after,
-        .hs-404-card {
-          animation: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="hs-404-stage">
-      <div class="hs-404-orbit" aria-hidden="true"></div>
-      <main class="hs-404-card">
-        <span class="hs-404-code">Error 404</span>
-        <h1 class="hs-404-title">Page not found</h1>
-        <p class="hs-404-text">
-          The page you are looking for is not here. It may have been moved, renamed, or typed
-          incorrectly.
-        </p>
-        <p class="hs-404-text">
-          Double-check the address and try again.
-        </p>
-        <div class="hs-404-meta">No links available on this page</div>
-      </main>
+  <aside data-cookie-banner hidden role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div>
+      <strong>Cookie settings</strong>
+      <p>We use a small cookie to remember your choice and basic preferences.</p>
     </div>
-  </body>
+    <div data-cookie-actions>
+      <button data-cookie-accept type="button">Accept</button>
+      <button data-cookie-decline type="button">Decline</button>
+    </div>
+  </aside>
+
+    <script>
+      (() => {
+        // Cookie banner: remember the choice and hide after a click.
+        const cookieKey = "suomitop24_cookie_choice";
+        const banner = document.querySelector("[data-cookie-banner]");
+        // Local storage helpers guard against privacy mode errors.
+        const readCookieChoice = () => {
+          try {
+            return localStorage.getItem(cookieKey);
+          } catch (error) {
+            return null;
+          }
+        };
+        const writeCookieChoice = (value) => {
+          try {
+            localStorage.setItem(cookieKey, value);
+          } catch (error) {
+            return;
+          }
+        };
+        if (banner) {
+          const saved = readCookieChoice();
+          if (saved) {
+            banner.setAttribute("hidden", "");
+          } else {
+            banner.removeAttribute("hidden");
+          }
+          const accept = banner.querySelector("[data-cookie-accept]");
+          const decline = banner.querySelector("[data-cookie-decline]");
+          const storeChoice = (value) => {
+            writeCookieChoice(value);
+            banner.setAttribute("hidden", "");
+          };
+          if (accept) {
+            accept.addEventListener("click", () => storeChoice("accepted"));
+          }
+          if (decline) {
+            decline.addEventListener("click", () => storeChoice("declined"));
+          }
+        }
+      })();
+    </script>
+</body>
 </html>
