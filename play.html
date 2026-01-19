@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Play | suomitop24</title>
-  <meta name="description" content="Launch the suomitop24 game for play-for-fun entertainment only. No real money, no prizes, and no purchases required. 18+ access.">
+  <title>Play | Suomitop24</title>
+  <meta name="description" content="Pick Aurora Dice, Northern Match, or Fjord Reels. Play-for-fun only - no real money, no prizes, no in-app purchases. 21+ only.">
   <link rel="icon" href="favicon.ico">
   <style>
     @font-face {
@@ -279,48 +279,33 @@
       font-size: clamp(2.4rem, 3.4vw, 3.2rem);
     }
 
-    [data-play-grid] {
+    [data-game-grid] {
       display: grid;
-      gap: 28px;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
+      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    [data-preview] {
-      background: #fff;
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid #e2eef3;
-    }
-
-    [data-preview] img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 16px;
-    }
-
-    [data-preview] figcaption {
-      font-size: 0.9rem;
-      color: var(--ink-soft);
-      margin-top: 10px;
-    }
-
-    [data-play-card] {
+    [data-game-card] {
       background: #fff;
       border-radius: 22px;
       padding: 22px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-soft);
       display: grid;
       gap: 12px;
       border: 1px solid #e2eef3;
     }
 
-    [data-play-actions] {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+    [data-game-tag] {
+      display: inline-flex;
+      align-self: start;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(20, 138, 143, 0.12);
+      color: var(--brand-deep);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     [data-play-note] {
@@ -344,28 +329,6 @@
       border-radius: 999px;
       font-size: 0.85rem;
       font-weight: 700;
-    }
-
-    [data-iframe-wrap] {
-      background: linear-gradient(135deg, rgba(20, 138, 143, 0.12), rgba(255, 111, 111, 0.12));
-      border-radius: 24px;
-      padding: 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid #e2eef3;
-    }
-
-    [data-iframe-shell] {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #0b1f2f;
-    }
-
-    [data-iframe-shell] iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
     }
 
     footer {
@@ -480,7 +443,7 @@
         justify-content: flex-start;
       }
 
-      [data-play-grid] {
+      [data-game-grid] {
         grid-template-columns: 1fr;
       }
 
@@ -498,8 +461,8 @@
         margin-top: 56px;
       }
 
-      [data-preview] img {
-        height: 130px;
+      [data-game-grid] {
+        grid-template-columns: 1fr;
       }
 
       footer [data-footer-grid] {
@@ -525,7 +488,7 @@
           <path d="M24 10l4.5 9.2 10.1 1.5-7.3 7.2 1.7 10.1L24 33.5 15 38l1.7-10.1-7.3-7.2 10.1-1.5L24 10z" fill="#148a8f" />
         </svg>
         <div>
-          <strong>suomitop24</strong>
+          <strong>Suomitop24</strong>
           <span>Social casino, play-for-fun.</span>
         </div>
       </div>
@@ -545,50 +508,50 @@
   <main>
       <section data-section="intro">
         <div data-wrap>
-          <h1>Play the game</h1>
-          <p>Start a play-for-fun session. This is entertainment only, with no real money, no prizes, and no purchases required. 18+ access.</p>
-          <p>There are no deposits, withdrawals, or cash-out features.</p>
-          <p>This page is mostly the player and a few quick notes so you can get straight to the action.</p>
-          <p>If you came from the game page, you are already set for Dragon Maiden. Just press play and settle in.</p>
+          <h1>Pick a game</h1>
+          <p>Start a play-for-fun session. Entertainment only - no real money, no prizes, and no purchases required. 21+ access.</p>
+          <p>Pick a game below. Each one opens on its own page with short rules and an easy reset.</p>
         </div>
       </section>
 
-    <section data-section="spotlight">
-      <div data-wrap>
-        <div data-play-grid>
-            <figure data-preview>
-              <img src="dragon.png" alt="Dragon themed game preview">
-              <figcaption>Preview art for the current game.</figcaption>
-            </figure>
-            <div data-play-card>
-              <p data-eyebrow>Spotlight game</p>
-              <h2 data-game-title>Dragon Maiden</h2>
-              <p data-game-desc>Story-led reels with bright symbols and a steady rhythm.</p>
-              <p>The game is meant to be light and low-stress, so take your time and explore the feel of it.</p>
-              <div data-play-actions>
-                <button data-cta data-game-reroll type="button">Pick another game</button>
-                <a data-ghost data-game-link href="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=dragonmaiden&lang=en_GB&practice=1&channel=desktop&demo=2" target="_blank" rel="noopener">Open in new tab</a>
-              </div>
-              <p>For entertainment only. Spins are simulated and carry no cash value.</p>
-              <p>Use the pick another game button if you want a fresh start. With one game, it simply refreshes the session.</p>
-            </div>
+      <section data-section="games">
+        <div data-wrap>
+          <div data-game-grid>
+            <article data-game-card>
+              <span data-game-tag>Dice</span>
+              <h2>Aurora Dice</h2>
+              <p>Roll two dice, watch the totals, and reset whenever you like.</p>
+              <p>Friendly and perfect for short breaks.</p>
+              <a data-cta href="dice.html">Play Aurora Dice</a>
+            </article>
+            <article data-game-card>
+              <span data-game-tag>Match</span>
+              <h2>Northern Match</h2>
+              <p>Flip cards, find pairs, and enjoy a calm memory puzzle.</p>
+              <p>No timer, just steady pacing.</p>
+              <a data-cta href="match.html">Play Northern Match</a>
+            </article>
+            <article data-game-card>
+              <span data-game-tag>Slot Style</span>
+              <h2>Fjord Reels</h2>
+              <p>Spin a slot-style reel with simple symbols and a mellow rhythm.</p>
+              <p>Built for the vibe, not for prizes.</p>
+              <a data-cta href="slots.html">Play Fjord Reels</a>
+            </article>
           </div>
         </div>
       </section>
 
-    <section data-section="frame">
-      <div data-wrap>
-          <p data-play-note>For entertainment only. No real money, no prizes, and no purchases required.</p>
-          <p data-age-note>18+ only</p>
-          <div data-iframe-wrap>
-            <div data-iframe-shell>
-              <iframe data-game-iframe title="Suomitop24 game" src="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=dragonmaiden&lang=en_GB&practice=1&channel=desktop&demo=2" loading="lazy" allowfullscreen></iframe>
-            </div>
-          </div>
-          <p>If the frame is blocked, use the open in new tab button above.</p>
-          <p>If it takes a moment to load, give it a beat or refresh the page. The game loads from a remote server.</p>
-        </div>
-      </section>
+      <section data-section="reminders">
+        <div data-wrap>
+        <p data-play-note>For entertainment only. No real money, no prizes, and no purchases required.</p>
+        <p data-age-note>21+ only.</p>
+        <p>Each game runs locally in your browser and can be reset anytime.</p>
+        <p>Not intended for minors.</p>
+        <p>No real-money gambling and no prizes of real-world value.</p>
+        <p>No in-app purchases.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -596,21 +559,9 @@
       <div data-footer-grid>
         <div>
           <h2>Get lounge updates</h2>
-          <p>A short monthly note with lounge updates and staff picks.</p>
-          <form data-newsletter-form>
-            <div data-newsletter-fields>
-              <div>
-                <label for="newsletter-name">Name</label>
-                <input id="newsletter-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div>
-                <label for="newsletter-email">Email</label>
-                <input id="newsletter-email" name="email" type="email" autocomplete="email" required>
-              </div>
-              <button data-cta type="submit">Subscribe</button>
-            </div>
-          </form>
-          <p data-newsletter-success hidden role="status">You're on the list. We'll send the next update soon.</p>
+          <p>Want the latest lounge notes? Email us and we can send the newest update we have.</p>
+          <a data-cta href="mailto:hello@suomitop24.games?subject=Suomitop24%20updates">Email for updates</a>
+          <p>We don't add you to marketing lists or automate update emails right now.</p>
         </div>
         <div>
           <h3>Explore</h3>
@@ -628,14 +579,14 @@
           </ul>
         </div>
       </div>
-      <p data-disclaimer>18+ only. Entertainment only. No real money, no prizes, no cash value, no purchases required, and no deposits or withdrawals. Please play responsibly.</p>
+      <p data-disclaimer>21+ only. Entertainment only. No real money, no prizes, no cash value, no purchases required, and no deposits or withdrawals. Please play responsibly.</p>
     </div>
   </footer>
 
-  <aside data-cookie-banner hidden role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <aside data-cookie-banner hidden role="dialog" aria-live="polite" aria-label="Storage consent">
     <div>
-      <strong>Cookie settings</strong>
-      <p>We use a small cookie to remember your choice and basic preferences.</p>
+      <strong>Storage settings</strong>
+      <p>We use a small local storage setting to remember your choice and basic preferences.</p>
     </div>
     <div data-cookie-actions>
       <button data-cookie-accept type="button">Accept</button>
@@ -644,6 +595,7 @@
   </aside>
 
     <script>
+      // Consent banner only: stores the user's choice in local storage.
       (() => {
         // Front-end helpers for this page.
         // Cookie banner: remember the choice and hide after a click.
@@ -688,78 +640,20 @@
           }
         }
 
-        // Newsletter form: show a success message without sending data.
-        const newsletterForm = document.querySelector("[data-newsletter-form]");
-        if (newsletterForm) {
-          const fields = newsletterForm.querySelector("[data-newsletter-fields]");
-          const success = document.querySelector("[data-newsletter-success]");
-          newsletterForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            if (fields) {
-              fields.setAttribute("hidden", "");
-            }
-            if (success) {
-              success.removeAttribute("hidden");
-            }
-            newsletterForm.reset();
-          });
-        }
-
-        // Game selection: read the URL param, set the iframe, and refresh on reroll.
-        const gameUrl = "https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=dragonmaiden&lang=en_GB&practice=1&channel=desktop&demo=2";
-        const games = [
-          { id: "dragon-maiden", name: "Dragon Maiden", tagline: "Story-led reels with bright symbols and a steady rhythm." }
-        ];
-
-        const params = new URLSearchParams(window.location.search);
-        const requested = params.get("game");
-        let current = games.find((game) => game.id === requested);
-        if (!current) {
-          current = games[Math.floor(Math.random() * games.length)];
-        }
-
-        const title = document.querySelector("[data-game-title]");
-        const desc = document.querySelector("[data-game-desc]");
-        const iframe = document.querySelector("[data-game-iframe]");
-        const openLink = document.querySelector("[data-game-link]");
-        const reroll = document.querySelector("[data-game-reroll]");
-
-        const setGame = (game) => {
-          if (title) {
-            title.textContent = game.name;
-          }
-          if (desc) {
-            desc.textContent = game.tagline;
-          }
-          if (iframe) {
-            iframe.src = gameUrl;
-          }
-          if (openLink) {
-            openLink.href = gameUrl;
-          }
-          const url = new URL(window.location);
-          url.searchParams.set("game", game.id);
-          history.replaceState({}, "", url);
-        };
-
-        setGame(current);
-
-        if (reroll) {
-          reroll.addEventListener("click", () => {
-            let next = current;
-            if (games.length > 1) {
-              while (next.id === current.id) {
-                next = games[Math.floor(Math.random() * games.length)];
-              }
-            }
-            current = next;
-            setGame(next);
-          });
-        }
       })();
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 

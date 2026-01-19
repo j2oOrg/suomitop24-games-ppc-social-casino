@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>suomitop24 | Social casino lounge for play-for-fun reels</title>
-  <meta name="description" content="Suomitop24 is a social casino lounge with colorful reels, a relaxed pace, and play-for-fun sessions with no real money, no prizes, and no purchases required. 18+ entertainment only.">
+  <title>Suomitop24 | Play-for-fun social casino games</title>
+  <meta name="description" content="Suomitop24 is a social casino lounge with dice, matching puzzles, and slot-style reels. Play-for-fun only - no real money, no prizes, no in-app purchases. 21+ only.">
   <link rel="icon" href="favicon.ico">
   <style>
     @font-face {
@@ -425,7 +425,8 @@
       background: linear-gradient(120deg, var(--accent-sun), var(--accent-sky), var(--accent-berry));
     }
 
-    [data-spotlight-media] img {
+    [data-spotlight-media] img,
+    [data-spotlight-media] svg {
       width: 100%;
       height: 200px;
       object-fit: cover;
@@ -643,11 +644,14 @@
       animation-delay: 0.3s;
     }
 
-    section[data-section="featured"] svg {
+    section[data-section="featured"] svg,
+    section[data-section="featured"] img {
       width: 100%;
-      height: 120px;
+      height: 140px;
       border-radius: 16px;
       background: linear-gradient(135deg, rgba(20, 138, 143, 0.2), rgba(255, 140, 207, 0.2));
+      object-fit: cover;
+      display: block;
     }
 
     section[data-section="stats"] [data-grid="stats"] {
@@ -878,7 +882,8 @@
         padding: 32px 0;
       }
 
-      [data-spotlight-media] img {
+      [data-spotlight-media] img,
+      [data-spotlight-media] svg {
         height: 160px;
       }
 
@@ -909,7 +914,7 @@
           <path d="M24 10l4.5 9.2 10.1 1.5-7.3 7.2 1.7 10.1L24 33.5 15 38l1.7-10.1-7.3-7.2 10.1-1.5L24 10z" fill="#148a8f" />
         </svg>
         <div>
-          <strong>suomitop24</strong>
+          <strong>Suomitop24</strong>
           <span>Social casino, play-for-fun.</span>
         </div>
       </div>
@@ -931,32 +936,32 @@
         <div data-hero-grid>
           <div data-hero-copy>
               <p data-eyebrow>Social casino lounge</p>
-              <h1>Bright reels, steady pacing, and play-for-fun sessions.</h1>
-              <p>suomitop24 is a social casino lounge built for colorful themes, light challenges, and a relaxed pace you can dip into anytime. It is entertainment only - no real money, no prizes, and no purchases required.</p>
-              <p>If you like the vibe of reel games and classic kasinot themes but not the pressure, this is the relaxed version. We keep the menu short, the buttons obvious, and the rules plain.</p>
-              <p>We built it for short breaks between classes and work: open a session, play a few minutes, and close it when you are done. No account, no wallet, no prize promises, and no in-game sales.</p>
-              <p>Some people treat it like a tiny study break ritual: one game, a few spins, back to the task list. That rhythm is exactly what we are going for.</p>
-              <p>If you want to keep it lightweight, pick a time limit before you start. It sounds simple, but it makes the whole experience feel more casual and less sticky.</p>
+              <h1>Dice rolls, matching puzzles, and slot-style reels for play-for-fun sessions.</h1>
+              <p>Suomitop24 is a social casino lounge with bright themes, low-stress play, and a pace you can jump into anytime. It's entertainment only - no real money, no prizes, and no purchases required.</p>
+              <p>If you like casino-inspired play without the pressure, this is the chill version. The menu is short, the buttons are obvious, and the rules are plain.</p>
+              <p>We built it for short breaks between class and work - open a session, play a few minutes, then bounce. No account, no wallet, no prize promises, and no in-game sales.</p>
+              <p>Some people use it as a study-break ritual: pick a game, play a few rounds, then get back to the task list. That rhythm is exactly what we are going for.</p>
+              <p>If you want to keep it lightweight, set a time limit before you start. It sounds simple, but it helps the whole experience stay casual.</p>
               <div data-hero-actions>
                 <a data-cta href="play.html">Start playing</a>
                 <a data-ghost href="games.html">See the game page</a>
               </div>
               <div data-hero-pills>
-                <span>18+ access</span>
+                <span>21+ access</span>
                 <span>Just for fun</span>
-                <span>Instant start</span>
+                <span>Easy start</span>
               </div>
           </div>
           <div data-hero-card>
-              <h2>Tonight's spotlight</h2>
+              <h2>Tonight's lineup</h2>
               <ul>
-                <li>One featured game with a story-led rhythm.</li>
+                <li>Three games: dice, match, and reels.</li>
                 <li>Clear play notes and no real-money play.</li>
                 <li>Easy start, no sign-in required.</li>
               </ul>
-              <p>The spotlight stays steady for now, so you can learn the rhythm instead of bouncing between menus.</p>
-              <p>It also makes it easier to talk about the game with friends since you are all looking at the same thing.</p>
-              <div data-hero-chip>Just for fun. No real money or prizes.</div>
+              <p>We keep three games in rotation, so you can learn the rhythm without bouncing between huge menus.</p>
+              <p>It also makes it easier to talk about the games with friends, since you're all looking at the same trio.</p>
+              <div data-hero-chip>Just for fun - no real money or prizes.</div>
             </div>
         </div>
       </div>
@@ -966,20 +971,32 @@
       <div data-wrap>
         <div data-spotlight-grid>
           <figure data-spotlight-media>
-            <img src="dragon.png" alt="Dragon Maiden preview art">
-            <figcaption>Featured game: Dragon Maiden</figcaption>
+            <svg viewBox="0 0 260 180" aria-hidden="true">
+              <defs>
+                <linearGradient id="spotlightGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#4cc9f0" />
+                  <stop offset="1" stop-color="#f6b024" />
+                </linearGradient>
+              </defs>
+              <rect width="260" height="180" rx="18" fill="url(#spotlightGradient)" opacity="0.3" />
+              <rect x="18" y="34" width="68" height="68" rx="14" fill="#148a8f" opacity="0.85" />
+              <rect x="96" y="34" width="68" height="68" rx="14" fill="#ff6f6f" opacity="0.85" />
+              <rect x="174" y="34" width="68" height="68" rx="14" fill="#f6b024" opacity="0.85" />
+              <rect x="38" y="118" width="184" height="10" rx="5" fill="#0b4f5b" opacity="0.6" />
+            </svg>
+            <figcaption>Featured trio: Aurora Dice, Northern Match, Fjord Reels</figcaption>
           </figure>
           <div data-spotlight-card>
-            <p data-eyebrow>Featured game</p>
-            <h2>Dragon Maiden</h2>
-            <p>A story-led reel with bright symbols and a steady rhythm, made for relaxed play.</p>
-            <p>The art leans warm, the symbols are easy to read, and the pacing stays calm enough to follow without rushing.</p>
+            <p data-eyebrow>Featured games</p>
+            <h2>Three easy ways to play</h2>
+            <p>Pick a dice roll, a matching grid, or a slot-style reel.</p>
+            <p>Each game is short, simple, and built for calm play.</p>
             <div data-spotlight-actions>
-              <a data-cta href="play.html?game=dragon-maiden">Play Dragon Maiden</a>
+              <a data-cta href="play.html">Start playing</a>
               <a data-ghost href="games.html">See the game page</a>
             </div>
-            <p>For entertainment only. No real money, no prizes, and no purchases required.</p>
-            <p>If you want a quick breather or a longer session, the game works either way.</p>
+            <p>Entertainment only - no real money, no prizes, and no purchases required.</p>
+            <p>21+ only. Please play responsibly.</p>
           </div>
         </div>
       </div>
@@ -988,27 +1005,27 @@
       <section data-section="benefits">
         <div data-wrap>
           <h2>Why people stick around</h2>
-          <p>These are the small things people mention when they keep the tab open.</p>
+          <p>These are the little things people mention when they keep the tab open.</p>
           <div data-grid="benefits">
             <article>
-              <h3>Quick start</h3>
-              <p>Open a session in seconds with no downloads or setup hurdles.</p>
-              <p>It runs right in the browser, so you can be playing before you finish your coffee.</p>
+              <h3>Easy start</h3>
+              <p>Open a session without extra setup or downloads.</p>
+              <p>It runs in the browser, so you can jump in without extra installs.</p>
             </article>
             <article>
-              <h3>Curated spotlight</h3>
-              <p>One game stays in focus, so it is easy to settle in without decision fatigue.</p>
-              <p>Less scrolling, more actual play. It is kind of the point.</p>
+              <h3>Small trio</h3>
+              <p>Three games cover dice, match, and reels without decision fatigue.</p>
+              <p>Less scrolling, more actual play. That is kind of the point.</p>
             </article>
             <article>
               <h3>Play at your pace</h3>
               <p>Short rounds or long sessions, both feel comfortable here.</p>
-              <p>Mute it, take notes, or just watch a few spins to get the feel.</p>
+              <p>Mute it, take notes, or play a few rounds to get the feel.</p>
             </article>
             <article>
-              <h3>Works across devices</h3>
-              <p>The layout stays easy to use on desktop, tablet, and phone.</p>
-              <p>Desktop is the sweet spot, but a phone still works for a quick check-in.</p>
+              <h3>Flexible layout</h3>
+              <p>The layout is designed to feel comfortable on larger screens and readable on smaller ones.</p>
+              <p>A larger screen feels best, but smaller screens are supported too.</p>
             </article>
           </div>
         </div>
@@ -1019,23 +1036,23 @@
           <div data-guide-grid>
             <div>
               <h2>Lounge guide</h2>
-              <p>We treat this like a calm corner of the internet. The play experience is the point, so the page keeps the noise down and lets the visuals do the work.</p>
-              <p>If you are new to this style, start by watching a couple of spins first. It helps to see the rhythm before you click around. The goal is to feel the pace, not chase a result.</p>
-              <p>We also keep the copy direct. If something is just-for-fun, we say it. If a button opens a new tab, we tell you. No surprises.</p>
-              <p>The overall vibe is relaxed, but we avoid the flashy stuff that usually comes with it. Think quiet lounge, not loud arcade.</p>
-              <p>When the page feels simple, it is intentional. It means you can focus on the game instead of the interface.</p>
+              <p>We treat this like a calm corner of the internet. The play is the point, so the page keeps the noise down and lets the visuals do the work.</p>
+              <p>If you're new to this style, start with the matching game and play a few rounds. It helps you feel the pace before you click around. The goal is to relax, not chase a result.</p>
+              <p>We keep the copy direct. If something is just for fun, we say it. If a game runs locally, we say it. No surprises.</p>
+              <p>The vibe is relaxed, but we avoid the flashy stuff that usually comes with it. Think quiet lounge, not loud arcade.</p>
+              <p>When the page feels simple, it's on purpose. It lets you focus on the game instead of the interface.</p>
             </div>
             <div data-guide-card>
               <h3>What to expect</h3>
               <ul>
-                <li>Play-for-fun only, with no cash value attached.</li>
-                <li>18+ access because the theme is mature and reel-based.</li>
+                <li>Play-for-fun only - no cash value attached.</li>
+                <li>21+ access because the theme is mature and casino-inspired.</li>
                 <li>No deposits or withdrawals because there is no money play.</li>
                 <li>No sign-up, no downloads, no email gate.</li>
                 <li>Short sessions are normal and totally fine.</li>
                 <li>Clear buttons and no in-app sales or paywalls.</li>
               </ul>
-              <p>If you just want a quick break, this is built for that.</p>
+              <p>If you just want a short break, this is built for that.</p>
               <p>If you want a longer hang, it still holds up without feeling repetitive.</p>
             </div>
           </div>
@@ -1047,19 +1064,19 @@
           <div data-journal-grid>
             <div>
               <h2>Lounge journal</h2>
-              <p>We get asked why the site is so short. The honest answer is that most people want to jump in, not browse for ten minutes first.</p>
-              <p>Keeping the list tight makes the game feel more familiar. After a couple sessions, you start to notice patterns, color shifts, and small story beats.</p>
-              <p>It is also easier to talk about. If a friend asks what you are playing, there is a simple answer and a shared reference point.</p>
-              <p>That is the point of the lounge here: a relaxed, shared vibe with no money pressure.</p>
-              <p>If we rotate the spotlight later, we will keep the same mindset. One game, clean layout, and clear notes.</p>
+              <p>People ask why the site is short. The honest answer: most folks want to jump in, not browse for ten minutes first.</p>
+              <p>Keeping the list tight makes the games feel more familiar. After a couple sessions, you start to notice patterns, color shifts, and small rule quirks.</p>
+              <p>It's also easier to talk about. If a friend asks what you're playing, there is a simple answer and a shared reference point.</p>
+              <p>That's the point of the lounge here: a relaxed, shared vibe with no money pressure.</p>
+              <p>If we add more games later, we plan to keep the same mindset: clean layout and clear notes.</p>
             </div>
             <div data-journal-card>
               <h3>Small habits that help</h3>
               <ul>
-                <li>Set a time limit if you are between tasks.</li>
+                <li>Set a time limit if you're between tasks.</li>
                 <li>Mute the audio in shared spaces.</li>
-                <li>Use the new tab link if the player is blocked.</li>
-                <li>Keep it light; it is for entertainment only and no purchases are required.</li>
+                <li>Use the reset button if you want a fresh start.</li>
+                <li>Keep it light; it's entertainment only and no purchases are required.</li>
               </ul>
               <p>These tiny habits keep the experience casual and easy to step away from.</p>
             </div>
@@ -1069,21 +1086,27 @@
 
       <section data-section="featured">
         <div data-wrap>
-          <h2>Featured game</h2>
-          <p>Dragon Maiden is our only featured game right now. We picked it because the symbols are clear, the pace is calm, and the visuals read well on a laptop screen.</p>
-          <p>It is a good match for the lounge because it is readable at a glance and does not feel hectic.</p>
-          <p>If you like a steady pace and a story-forward feel, this one lands nicely.</p>
+          <h2>Featured games</h2>
+          <p>These three games set the tone for the lounge. Each one is simple, readable, and built for short sessions.</p>
+          <p>Pick the pace you want, then jump in. All play is just for fun.</p>
           <div data-grid="featured">
             <article>
-              <svg viewBox="0 0 160 100" aria-hidden="true">
-                <rect x="0" y="0" width="160" height="100" fill="#f7f1ff" />
-                <path d="M18 72 Q48 18 92 38 T142 26" stroke="#148a8f" stroke-width="10" fill="none" stroke-linecap="round" />
-                <circle cx="40" cy="70" r="12" fill="#ff6f6f" opacity="0.8" />
-                <circle cx="120" cy="70" r="14" fill="#f6b024" opacity="0.85" />
-              </svg>
-              <h3>Dragon Maiden</h3>
-              <p>Mythic symbols, bright accents, and a story-forward pace built for relaxed spins.</p>
-              <a data-ghost href="play.html?game=dragon-maiden">Play now</a>
+              <img src="dice.webp" alt="Red dice in motion" loading="lazy">
+              <h3>Aurora Dice</h3>
+              <p>Simple dice rolls with clear totals and an easy reset.</p>
+              <a data-ghost href="dice.html">Play now</a>
+            </article>
+            <article>
+              <img src="match.webp" alt="Wooden blocks with the word lucky and a small duck figurine" loading="lazy">
+              <h3>Northern Match</h3>
+              <p>Calm memory matching with tidy cards and a steady rhythm.</p>
+              <a data-ghost href="match.html">Play now</a>
+            </article>
+            <article>
+              <img src="slots.webp" alt="Slot machine reels with fruit symbols" loading="lazy">
+              <h3>Fjord Reels</h3>
+              <p>A slot-style reel with mellow pacing and simple symbols.</p>
+              <a data-ghost href="slots.html">Play now</a>
             </article>
           </div>
         </div>
@@ -1094,19 +1117,19 @@
           <p>The numbers are simple on purpose. We want the basics to be obvious.</p>
           <div data-grid="stats">
             <div>
-              <p data-stat-number>1</p>
-              <p>Spotlight game live right now.</p>
+              <p data-stat-number>3</p>
+              <p>Play-for-fun games live right now.</p>
             </div>
             <div>
               <p data-stat-number>0</p>
               <p>Real money or prizes: none. Just for fun.</p>
             </div>
             <div>
-              <p data-stat-number>18+</p>
+              <p data-stat-number>21+</p>
               <p>Minimum age to explore the lounge.</p>
             </div>
           </div>
-          <p>If any of these change, we will update the page and say so.</p>
+          <p>If any of these change, we plan to update the page.</p>
           <p>We repeat this because the tone matters. This is a low-pressure space, and we want that to be clear at a glance.</p>
         </div>
       </section>
@@ -1114,18 +1137,18 @@
       <section data-section="how">
         <div data-wrap>
           <h2>How play works</h2>
-          <p>The flow is simple and the steps are light. Think of it like a quick routine for a chill play session.</p>
-          <p>You can treat it like background fun while you write, or give it full focus for a few minutes. Either way is fine.</p>
+          <p>The flow is simple and the steps are light. Think of it like a simple routine for a chill play session.</p>
+          <p>You can treat it like background fun while you write, or give it full focus for a few minutes. Either way works.</p>
           <div data-grid="steps">
             <article>
               <div data-step-number>01</div>
               <h3>Meet the showcase</h3>
-              <p>A single game stays in focus so it is easy to jump in. You do not have to compare ten titles first.</p>
+              <p>Three games keep the list small, so it's easy to jump in. You don't have to compare ten titles first.</p>
             </article>
             <article>
               <div data-step-number>02</div>
               <h3>Launch the game</h3>
-              <p>Start a play-for-fun session in seconds with no real money involved. If the frame is blocked, open the game in a new tab.</p>
+              <p>Start a play-for-fun session with no real money involved. Each game runs on its own page with a simple reset.</p>
             </article>
             <article>
               <div data-step-number>03</div>
@@ -1133,7 +1156,7 @@
               <p>Adjust sound, settle into the rhythm, and take breaks as needed. There is no timer and no pressure to keep going.</p>
             </article>
           </div>
-          <p>If you are the type who likes structure, set a small goal like ten spins and stop there. It keeps the vibe light.</p>
+          <p>If you like structure, set a small goal like ten rounds and stop there. It keeps the vibe light.</p>
         </div>
       </section>
   </main>
@@ -1143,22 +1166,10 @@
         <div data-footer-grid>
           <div>
             <h2>Get lounge updates</h2>
-            <p>A short monthly note with lounge updates and staff picks.</p>
-          <form data-newsletter-form>
-            <div data-newsletter-fields>
-              <div>
-                <label for="newsletter-name">Name</label>
-                <input id="newsletter-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div>
-                <label for="newsletter-email">Email</label>
-                <input id="newsletter-email" name="email" type="email" autocomplete="email" required>
-              </div>
-              <button data-cta type="submit">Subscribe</button>
-            </div>
-          </form>
-          <p data-newsletter-success hidden role="status">You're on the list. We'll send the next update soon.</p>
-        </div>
+            <p>Want the latest lounge notes? Email us and we can send the newest update we have.</p>
+            <a data-cta href="mailto:hello@suomitop24.games?subject=Suomitop24%20updates">Email for updates</a>
+            <p>We don't add you to marketing lists or automate update emails right now.</p>
+          </div>
         <div>
           <h3>Explore</h3>
           <ul>
@@ -1175,14 +1186,14 @@
           </ul>
         </div>
       </div>
-      <p data-disclaimer>18+ only. Entertainment only. No real money, no prizes, no cash value, no purchases required, and no deposits or withdrawals. Please play responsibly.</p>
+      <p data-disclaimer>21+ only. Entertainment only. No real money, no prizes, no cash value, no purchases required, and no deposits or withdrawals. Please play responsibly.</p>
     </div>
   </footer>
 
-  <aside data-cookie-banner hidden role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <aside data-cookie-banner hidden role="dialog" aria-live="polite" aria-label="Storage consent">
     <div>
-      <strong>Cookie settings</strong>
-      <p>We use a small cookie to remember your choice and basic preferences.</p>
+      <strong>Storage settings</strong>
+      <p>We use a small local storage setting to remember your choice and basic preferences.</p>
     </div>
     <div data-cookie-actions>
       <button data-cookie-accept type="button">Accept</button>
@@ -1191,6 +1202,7 @@
   </aside>
 
     <script>
+      // Consent banner only: stores the user's choice in local storage.
       (() => {
         // Front-end helpers for this page.
         // Cookie banner: remember the choice and hide after a click.
@@ -1234,27 +1246,20 @@
             decline.addEventListener("click", () => storeChoice("declined"));
           }
         }
-
-        // Newsletter form: show a success message without sending data.
-        const newsletterForm = document.querySelector("[data-newsletter-form]");
-        if (newsletterForm) {
-          const fields = newsletterForm.querySelector("[data-newsletter-fields]");
-          const success = document.querySelector("[data-newsletter-success]");
-          newsletterForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            if (fields) {
-              fields.setAttribute("hidden", "");
-            }
-            if (success) {
-              success.removeAttribute("hidden");
-            }
-            newsletterForm.reset();
-          });
-        }
       })();
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
