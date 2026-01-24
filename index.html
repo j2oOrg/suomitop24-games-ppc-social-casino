@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Suomitop24 | Play-for-fun social casino games</title>
-  <meta name="description" content="Suomitop24 is a social casino lounge with dice, matching puzzles, and slot-style reels. Play-for-fun only - no real money, no prizes, no in-app purchases. 21+ only.">
+  <meta name="description" content="Suomitop24 is a social casino lounge with dice, matching puzzles, and slot-style reels. Play-for-fun only - no real money, no prizes, no in-app purchases. 18+ only.">
   <link rel="icon" href="favicon.ico">
   <style>
     @font-face {
@@ -901,6 +901,49 @@
         scroll-behavior: auto !important;
       }
     }
+      body[data-age-locked] {
+      overflow: hidden;
+    }
+
+    [data-age-gate] {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(11, 31, 47, 0.82);
+      z-index: 9999;
+      padding: 24px;
+    }
+
+    [data-age-card] {
+      width: min(520px, 92vw);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid #e2eef3;
+      display: grid;
+      gap: 12px;
+    }
+
+    [data-age-card] h2 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    [data-age-actions] {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    [data-age-result] {
+      margin: 0;
+      color: var(--ink-soft);
+    }
   </style>
 </head>
 <body>
@@ -945,7 +988,7 @@
                 <a data-ghost href="games.html">See the game page</a>
               </div>
               <div data-hero-pills>
-                <span>21+ access</span>
+                <span>18+ access</span>
                 <span>Just for fun</span>
                 <span>Easy start</span>
               </div>
@@ -982,7 +1025,7 @@
               <a data-ghost href="games.html">See the game page</a>
             </div>
             <p>Entertainment only - no real money, no prizes, and no purchases required.</p>
-            <p>21+ only. Please play responsibly.</p>
+            <p>18+ only. Please play responsibly.</p>
           </div>
         </div>
       </div>
@@ -1032,7 +1075,7 @@
               <h3>What to expect</h3>
               <ul>
                 <li>Play-for-fun only - no cash value attached.</li>
-                <li>21+ access because the theme is mature and casino-inspired.</li>
+                <li>18+ access because the theme is mature and casino-inspired.</li>
                 <li>No deposits or withdrawals because there is no money play.</li>
                 <li>No sign-up, no downloads, no email gate.</li>
                 <li>Short sessions are normal and totally fine.</li>
@@ -1111,7 +1154,7 @@
               <p>Real money or prizes: none. Just for fun.</p>
             </div>
             <div>
-              <p data-stat-number>21+</p>
+              <p data-stat-number>18+</p>
               <p>Minimum age to explore the lounge.</p>
             </div>
           </div>
@@ -1172,10 +1215,22 @@
           </ul>
         </div>
       </div>
-      <p data-disclaimer>21+ only. Entertainment only. No real money, no prizes, no cash value, no purchases required, and no deposits or withdrawals. Please play responsibly.</p>
+      <p data-disclaimer>18+ only. Entertainment only. No real money, no prizes, no cash value, no purchases required, and no deposits or withdrawals. Please play responsibly.</p>
     </div>
   </footer>
-
+  <aside data-age-gate hidden role="dialog" aria-live="polite" aria-label="Age gate">
+    <div data-age-card>
+      <p data-eyebrow>Age check</p>
+      <h2>Are you 18 or older?</h2>
+      <p>Suomitop24 is play-for-fun only and not intended for minors.</p>
+      <p>No real money, no prizes, and no purchases.</p>
+      <div data-age-actions>
+        <button data-cta type="button" data-age-confirm>Yes, I am 18+</button>
+        <button data-ghost type="button" data-age-decline>No, I am not 18+</button>
+      </div>
+      <p data-age-result>By entering, you confirm you are at least 18.</p>
+    </div>
+  </aside>
   <aside data-cookie-banner hidden role="dialog" aria-live="polite" aria-label="Storage consent">
     <div>
       <strong>Storage settings</strong>
@@ -1187,8 +1242,67 @@
     </div>
   </aside>
 
-    <script>
-      // Consent banner only: stores the user's choice in local storage.
+      <script>
+    // Age gate only: confirms visitor is 18+ and stores choice locally.
+    (() => {
+      const ageKey = "suomitop24_age_gate";
+      const gate = document.querySelector("[data-age-gate]");
+      if (!gate) {
+        return;
+      }
+      const confirm = gate.querySelector("[data-age-confirm]");
+      const decline = gate.querySelector("[data-age-decline]");
+      const result = gate.querySelector("[data-age-result]");
+
+      const showGate = () => {
+        gate.hidden = false;
+        document.body.setAttribute("data-age-locked", "");
+      };
+
+      const hideGate = () => {
+        gate.hidden = true;
+        document.body.removeAttribute("data-age-locked");
+      };
+
+      let saved = null;
+      try {
+        saved = localStorage.getItem(ageKey);
+      } catch (error) {
+        saved = null;
+      }
+
+      if (saved === "confirmed") {
+        hideGate();
+      } else {
+        showGate();
+      }
+
+      const confirmAge = () => {
+        try {
+          localStorage.setItem(ageKey, "confirmed");
+        } catch (error) {
+          // Local storage may be unavailable; fall back to session-only confirmation.
+        }
+        hideGate();
+      };
+
+      const declineAge = () => {
+        if (result) {
+          result.textContent = "Sorry, this site is 18+ only.";
+        }
+        showGate();
+      };
+
+      if (confirm) {
+        confirm.addEventListener("click", confirmAge);
+      }
+      if (decline) {
+        decline.addEventListener("click", declineAge);
+      }
+    })();
+  </script>
+  <script>
+    // Consent banner only: stores the user's choice in local storage.
       (() => {
         // Front-end helpers for this page.
         // Cookie banner: remember the choice and hide after a click.
@@ -1236,6 +1350,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 
